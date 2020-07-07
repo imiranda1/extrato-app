@@ -1,5 +1,6 @@
 package br.com.extrato.utils;
 
+import br.com.extrato.controller.ExtratoController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,7 +18,7 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 @Configuration
 @EnableSwagger2
-public class SwaggeConfig {
+public class SwaggerConfig {
 
 
     ApiInfo apiInfo() {
@@ -35,10 +36,11 @@ public class SwaggeConfig {
     public Docket customImplementation(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("br.com.extrato.controller"))
+                .apis(RequestHandlerSelectors.basePackage("br.com.extrato"))
                 .paths(PathSelectors.ant("/**"))
                 .build()
                 .apiInfo(apiInfo());
+
     }
 
 }
