@@ -1,0 +1,7 @@
+
+API responsável por transformar a informação de um arquivo json de um sistema legado.
+Projeto realizado em Java utilizando o framework spring-boot;
+
+Documentação: http://localhost:8080/swagger-ui.html
+apiUrl: http://localhost:8080/extrato
+
